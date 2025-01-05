@@ -2,7 +2,7 @@ package ru.netology.stats.javamvn7.services;
 
 //номер месяца, в котором был минимум продаж, то есть осуществлены продажи на минимальную сумму
 public class StatsService {
-    public int minSales(long[] sales) {
+    public long minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -14,7 +14,7 @@ public class StatsService {
     }
 
     // номер месяца, в котором был пик продаж, то есть осуществлены продажи на максимальную сумму
-    public int maxSales(long[] sales) {
+    public long maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -26,7 +26,7 @@ public class StatsService {
     }
 
     //сумма всех продаж
-    public int sumSales(long[] sales) {
+    public long sumSales(long[] sales) {
         int sum = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -36,7 +36,7 @@ public class StatsService {
     }
 
     //средняя сумма продаж в месяц
-    public int averageSales(long[] sales) {
+    public long averageSales(long[] sales) {
         int sum = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -46,8 +46,8 @@ public class StatsService {
     }
 
     //количество месяцев, в которых продажи были выше среднего
-    public int moreAverageSales(long[] sales) {
-        int averageSales = averageSales(sales);
+    public long moreAverageSales(long[] sales) {
+        long averageSales = averageSales(sales);
         int moreSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -59,8 +59,8 @@ public class StatsService {
     }
 
     //количество месяцев, в которых продажи были ниже среднего
-    public int lessAverageSales(long[] sales) {
-        int averageSales = averageSales(sales);
+    public long lessAverageSales(long[] sales) {
+        long averageSales = averageSales(sales);
         int lessSales = 0;
 
         for (int i = 0; i < sales.length; i++) {
